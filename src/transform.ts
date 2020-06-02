@@ -22,7 +22,7 @@ function transform(filePath: string) {
   const program = ts.createProgram(fileNames, compilerOptions);
   const typeChecker = program.getTypeChecker();
   const sourceFiles = program.getSourceFiles();
-  const interfaces = new Set();
+  const interfaces = new Set<string>();
 
   log("Found SoureceFiles", fileNames);
   log("Starting generation an", program.getCurrentDirectory())
